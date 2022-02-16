@@ -1,8 +1,18 @@
+#title {
+    text-align: center;
+}
+
 #color-palette {
-width: 100%;
+    text-align: center;
+    width: 100%;
 }
 
 .color {
     text-align: center;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
     color: red;
+    border: 1px solid;
+    border-color: black;
 }
