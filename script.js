@@ -3,7 +3,7 @@ function renderColors() {
   const listColor = ['red', 'green', 'blue', 'yellow', 'pink', 'purple', 'gray', 'cyan', 'orange'];
   divColors[0].style.backgroundColor = 'black';
   divColors[0].classList.add('selected');
-  for (let i = 1; i < 4; i += 1) {
+  for (let i = 0; i < 4; i += 1) {
     const colorNum = Math.floor(Math.random() * 10) - 2;
     divColors[i].style.backgroundColor = listColor[colorNum];
   }
@@ -32,3 +32,9 @@ function renderPixels() {
 
 renderColorPalette();
 renderPixels();
+
+const colorSelector = document.getElementsByClassName('color');
+
+colorSelector[0].addEventListener('click', function() {
+  alert('tesste');
+});
