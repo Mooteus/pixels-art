@@ -40,7 +40,7 @@ function removeSelected(colorSelector, divIndex) {
   colorSelector[divIndex].classList.add('selected');
 }
 
-function verifyClick() {
+function verifyClickPalette() {
   const colorSelector = document.getElementsByClassName('color');
 
   colorSelector[0].addEventListener('click', () => {
@@ -62,4 +62,4 @@ function verifyClick() {
 
 renderColorPalette();
 renderPixels();
-verifyClick();
+verifyClickPalette();
