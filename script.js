@@ -33,20 +33,30 @@ function renderPixels() {
   }
 }
 
+function removeSelected(colorSelector, divIndex) {
+  for (let i = 0; i < 4; i += 1) {
+    colorSelector[i].classList.remove('selected');
+  }
+  colorSelector[divIndex].classList.add('selected');
+}
+
 function verifyClick() {
   const colorSelector = document.getElementsByClassName('color');
 
   colorSelector[0].addEventListener('click', () => {
-    alert('teste0');
+    removeSelected(colorSelector, 0);
   });
+
   colorSelector[1].addEventListener('click', () => {
-    alert('teste1');
+    removeSelected(colorSelector, 1);
   });
+
   colorSelector[2].addEventListener('click', () => {
-    alert('teste2');
+    removeSelected(colorSelector, 2);
   });
+
   colorSelector[3].addEventListener('click', () => {
-    alert('teste3');
+    removeSelected(colorSelector, 3);
   });
 }
 
