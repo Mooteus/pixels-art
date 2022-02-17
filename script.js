@@ -2,7 +2,7 @@ function renderColors() {
   const divColors = document.getElementsByClassName('color');
   const listColor = ['red', 'green', 'blue', 'yellow', 'pink', 'purple', 'gray', 'cyan', 'orange'];
   divColors[0].style.backgroundColor = 'black';
-  divColors[0].setAttribute('selected', true);
+  divColors[0].classList.add('selected');
   for (let i = 1; i < 4; i += 1) {
     const colorNum = Math.floor(Math.random() * 10) - 2;
     divColors[i].style.backgroundColor = listColor[colorNum];
