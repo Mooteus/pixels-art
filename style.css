@@ -5,7 +5,7 @@
 
 #color-palette {
   width: 100%;
-  text-align: center;
+  margin-left: 34%;
 }
 
 .color {
@@ -19,10 +19,10 @@
 
 #pixel-board {
   width: 600px;
+  margin-left: 30%;
 }
 
 .pixel {
-  text-align: center;
   display: inline-block;
   width: 100px;
   height: 100px;
