@@ -23,12 +23,21 @@ function renderColorPalette() {
   renderColors();
 }
 
+function verifyClickPixel(event) {
+  const pixel = event.target;
+  const select = document.querySelector('.selected');
+  const css = window.getComputedStyle(select, null);
+  const color = css.getPropertyValue('background-color');
+  pixel.style.backgroundColor = color;
+}
+
 function renderPixels() {
   const PixelBoard = document.getElementById('pixel-board');
 
   for (let i = 0; i < 25; i += 1) {
     const pixel = document.createElement('div');
     pixel.classList.add('pixel');
+    pixel.addEventListener('click', verifyClickPixel);
     PixelBoard.appendChild(pixel);
   }
 }
