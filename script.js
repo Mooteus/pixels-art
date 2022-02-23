@@ -1,13 +1,20 @@
+// gera cores aleatorias para a paleta de cores
 function GenerateRandomColors() {
-  document.getElementById('color-0').style.backgroundColor = 'black';
+  let red;
+  let green;
+  let blue;
+  const firstColor = document.getElementById('color-0');
+  firstColor.style.backgroundColor = 'black';
+  firstColor.classList.add('selected');
   for (let i = 1; i <= 3; i += 1) {
-    const red = Math.round(Math.random() * 256);
-    const green = Math.round(Math.random() * 256);
-    const blue = Math.round(Math.random() * 256);
+    red = Math.round(Math.random() * 256);
+    green = Math.round(Math.random() * 256);
+    blue = Math.round(Math.random() * 256);
     document.getElementById(`color-${i}`).style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
   }
 }
 
+// gera os pixel do pixel-board
 function GeneratePixelBoard() {
   let pixel;
   const pixelBoard = document.getElementById('pixel-board');
