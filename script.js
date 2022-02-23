@@ -8,4 +8,15 @@ function GenerateRandomColors() {
   }
 }
 
+function GeneratePixelBoard() {
+  let pixel;
+  const pixelBoard = document.getElementById('pixel-board');
+  for (let i = 0; i < 25; i += 1) {
+    pixel = document.createElement('div');
+    pixel.classList.add('pixel');
+    pixelBoard.appendChild(pixel);
+  }
+}
+
 GenerateRandomColors();
+GeneratePixelBoard();
