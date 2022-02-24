@@ -50,11 +50,24 @@ colorClick.addEventListener('click', (e) => {
   selectColor(e.target.id);
 });
 
+// recebe o click e pinta o pixel alvo
 const pixelClick = document.getElementById('pixel-board');
 pixelClick.addEventListener('click', (e) => {
   const color = document.querySelector('.selected').style.backgroundColor;
-  console.log(color);
   e.target.style.backgroundColor = color;
+});
+
+// limpa o board de pixels por completo
+function clearBoard() {
+  const pixelList = document.getElementsByClassName('pixel');
+  for (let i = 0; i < pixelList.length; i += 1) {
+    pixelList[i].style.backgroundColor = 'white';
+  }
+}
+
+const clearClick = document.getElementById('clear-board');
+clearClick.addEventListener('click', () => {
+  clearBoard();
 });
 
 window.onload = () => {
