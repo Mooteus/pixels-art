@@ -25,7 +25,7 @@ function GeneratePixelBoard(range) {
   const pixelBoard = document.getElementById('pixel-board');
 
   pixelBoard.style.width = `${widthCalc}px`;
-
+  pixelBoard.innerHTML = '';
   for (let i = 0; i < rangeCalc; i += 1) {
     pixel = document.createElement('div');
     pixel.classList.add('pixel');
@@ -77,10 +77,11 @@ clearClick.addEventListener('click', () => {
 // gera outra pixel board;
 const clickGenerateBoard = document.getElementById('generate-board');
 clickGenerateBoard.addEventListener('click', () => {
-  GeneratePixelBoard();
+  const boardSize = document.getElementById('board-size').value;
+  GeneratePixelBoard(boardSize);
 });
 
 window.onload = () => {
   GenerateRandomColors();
-  GeneratePixelBoard(6);
+  GeneratePixelBoard(5);
 };
