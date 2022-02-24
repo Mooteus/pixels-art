@@ -20,9 +20,13 @@ function GenerateRandomColors() {
 // gera os pixel do pixel-board
 function GeneratePixelBoard(range) {
   let pixel;
+  const rangeCalc = range * range;
+  const widthCalc = (40 * range) + (range * 2);
   const pixelBoard = document.getElementById('pixel-board');
 
-  for (let i = 0; i < range; i += 1) {
+  pixelBoard.style.width = `${widthCalc}px`;
+
+  for (let i = 0; i < rangeCalc; i += 1) {
     pixel = document.createElement('div');
     pixel.classList.add('pixel');
     pixelBoard.appendChild(pixel);
@@ -70,7 +74,13 @@ clearClick.addEventListener('click', () => {
   clearBoard();
 });
 
+// gera outra pixel board;
+const clickGenerateBoard = document.getElementById('generate-board');
+clickGenerateBoard.addEventListener('click', () => {
+  GeneratePixelBoard();
+});
+
 window.onload = () => {
   GenerateRandomColors();
-  GeneratePixelBoard(25);
+  GeneratePixelBoard(6);
 };
