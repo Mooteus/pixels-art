@@ -29,6 +29,7 @@ function GeneratePixelBoard(range) {
   }
 }
 
+// remove a classe selected do botao que contiver ela
 function removeSelected() {
   const selected = document.querySelector('.selected');
   if (selected) {
@@ -36,15 +37,24 @@ function removeSelected() {
   }
 }
 
+// seleciona a cor a ser usada
 function selectColor(id) {
   removeSelected();
   const color = document.getElementById(id);
   color.classList.add('selected');
 }
 
+// recebe o clique para selecionar a cor e traça o id do item clicado
 const colorClick = document.getElementById('color-palette');
 colorClick.addEventListener('click', (e) => {
   selectColor(e.target.id);
+});
+
+const pixelClick = document.getElementById('pixel-board');
+pixelClick.addEventListener('click', (e) => {
+  const color = document.querySelector('.selected').style.backgroundColor;
+  console.log(color);
+  e.target.style.backgroundColor = color;
 });
 
 window.onload = () => {
