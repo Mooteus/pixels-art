@@ -78,8 +78,12 @@ clearClick.addEventListener('click', () => {
 const clickGenerateBoard = document.getElementById('generate-board');
 clickGenerateBoard.addEventListener('click', () => {
   const boardSize = document.getElementById('board-size').value;
-  if (boardSize < 5 || boardSize > 50) {
+  if (boardSize < 5) {
     alert('Board inválido!');
+    GeneratePixelBoard(5);
+  } else if (boardSize > 50) {
+    alert('Board inválido!');
+    GeneratePixelBoard(50);
   } else {
     GeneratePixelBoard(boardSize);
   }
