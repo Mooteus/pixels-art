@@ -29,6 +29,24 @@ function GeneratePixelBoard(range) {
   }
 }
 
+function removeSelected() {
+  const selected = document.querySelector('.selected');
+  if (selected) {
+    selected.classList.remove('selected');
+  }
+}
+
+function selectColor(id) {
+  removeSelected();
+  const color = document.getElementById(id);
+  color.classList.add('selected');
+}
+
+const colorClick = document.getElementById('color-palette');
+colorClick.addEventListener('click', (e) => {
+  selectColor(e.target.id);
+});
+
 window.onload = () => {
   GenerateRandomColors();
   GeneratePixelBoard(25);
