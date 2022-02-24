@@ -21,3 +21,7 @@
   background-color: white;
   border: 1px solid black;
 }
+
+.selected {
+  border: 2px solid red;
+}
