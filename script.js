@@ -78,7 +78,11 @@ clearClick.addEventListener('click', () => {
 const clickGenerateBoard = document.getElementById('generate-board');
 clickGenerateBoard.addEventListener('click', () => {
   const boardSize = document.getElementById('board-size').value;
-  GeneratePixelBoard(boardSize);
+  if (boardSize < 5 || boardSize > 50) {
+    alert('Board inválido!');
+  } else {
+    GeneratePixelBoard(boardSize);
+  }
 });
 
 window.onload = () => {
