@@ -1,6 +1,13 @@
+main {
+  text-align: center;
+}
+
 #color-palette {
   display: flex;
   flex-wrap: nowrap;
+  width: 165px;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .color {
@@ -12,6 +19,8 @@
 #pixel-board {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 .pixel {
