@@ -36,7 +36,7 @@ main {
   margin: 0 auto;
 }
 
-#color-picker {
+#color-picker-board {
   display: flex;
   align-items: center;
   width: 40px;
@@ -45,10 +45,14 @@ main {
   cursor: pointer;
 }
 
-#color-picker img{
+#color-picker-board img{
   margin: 0 auto;
   width: 20px;
   height: 20px;
+}
+
+#color-picker {
+  display: none;
 }
 
 .color {

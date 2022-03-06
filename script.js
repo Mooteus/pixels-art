@@ -95,6 +95,13 @@ clickEraser.addEventListener('click', () => {
   selectColor('eraser');
 });
 
+// color picker 
+const clickColorPicker = document.getElementById('color-picker-board');
+const colorPicker = document.getElementById('color-picker');
+clickColorPicker.addEventListener('click', () => {
+  colorPicker.click();
+})
+
 window.onload = () => {
   GenerateRandomColors();
   GeneratePixelBoard(5);
