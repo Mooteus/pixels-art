@@ -13,15 +13,29 @@ main {
 #color-palette {
   display: flex;
   flex-wrap: nowrap;
-  width: 210px;
+  width: 250px;
   margin: 0 auto;
   margin-bottom: 10px;
+}
+
+#eraser {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#eraser img{
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
 }
 
 #color-picker {
   display: flex;
   align-items: center;
-  background-color: white;
   width: 40px;
   height: 40px;
   border: 1px solid black;
