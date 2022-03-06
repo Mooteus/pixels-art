@@ -89,6 +89,12 @@ clickGenerateBoard.addEventListener('click', () => {
   }
 });
 
+// eraser 
+const clickEraser = document.getElementById('eraser');
+clickEraser.addEventListener('click', () => {
+  selectColor('eraser');
+});
+
 window.onload = () => {
   GenerateRandomColors();
   GeneratePixelBoard(5);
