@@ -100,7 +100,12 @@ const clickColorPicker = document.getElementById('color-picker-board');
 const colorPicker = document.getElementById('color-picker');
 clickColorPicker.addEventListener('click', () => {
   colorPicker.click();
+  selectColor('color-picker-board');
 })
+
+colorPicker.addEventListener('change', () => {
+  clickColorPicker.style.backgroundColor = colorPicker.value;
+});
 
 window.onload = () => {
   GenerateRandomColors();
