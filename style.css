@@ -13,9 +13,25 @@ main {
 #color-palette {
   display: flex;
   flex-wrap: nowrap;
-  width: 165px;
+  width: 210px;
   margin: 0 auto;
   margin-bottom: 10px;
+}
+
+#color-picker {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#color-picker img{
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
 }
 
 .color {
