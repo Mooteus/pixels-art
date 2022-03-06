@@ -2,6 +2,14 @@ main {
   text-align: center;
 }
 
+#title {
+  font-family: 'VT323', monospace;
+  font-size: 45px;
+  width: 100%;
+  letter-spacing: 5px;
+  transition: 1s;
+}
+
 #color-palette {
   display: flex;
   flex-wrap: nowrap;
